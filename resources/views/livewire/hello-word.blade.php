@@ -12,4 +12,23 @@
     </select>
 
     {{ implode(',',$greeting)}}  {{ strtoupper($name) }} @if ($loud) ! @endif
+
+    {{-- <button wire:click="resetName($event.target.innerText)" > {{$name}}</button> --}}
+    {{-- <button wire:mouseover="resetName('Bingo')" > {{$name}}</button> --}}
+    {{-- <button wire:custom-event="resetName('Bingo')" > {{$name}}</button> --}}
+    
+    
+    {{-- <form action="#" wire:submit.prevent="resetName('Bingo')">
+    
+   
+    <button > Mudar nome</button>
+     </form> --}}
+
+    {{-- sem funcao no controller, passa direto --}}
+    <form action="#" wire:submit.prevent="$set('name','Bingo')">
+    
+   
+    <button > Mudar nome</button>
+     </form>
+
 </div>
